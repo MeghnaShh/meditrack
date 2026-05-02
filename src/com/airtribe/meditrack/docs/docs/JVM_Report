@@ -1,0 +1,52 @@
+# JVM Report
+
+## Introduction
+Java runs on the Java Virtual Machine (JVM), which executes bytecode and makes Java platform-independent.
+
+## 1. Class Loader
+Loads `.class` files into memory.
+
+**Types:**
+- Bootstrap ClassLoader loads core Java classes
+- Extension ClassLoader loads extension libraries
+- Application ClassLoader loads application classes
+
+**Flow:**
+.java → compiled → .class → loaded into JVM
+
+## 2. Runtime Data Areas
+
+**Heap**
+- Stores objects
+- Shared across threads
+
+**Stack**
+- Stores method calls & local variables
+- Each thread has its own stack
+
+**Method Area**
+- Stores class metadata & static variables
+
+**PC Register**
+- Stores current executing instruction
+
+## 3. Execution Engine
+
+Executes bytecode using:
+- **Interpreter** – executes line by line (slow)
+- **JIT Compiler** – converts to machine code (fast)
+
+## 4. JIT vs Interpreter
+
+Interpreter - JIT Compiler
+Slower - Faster
+Line-by-line - Compiled
+No optimization - Optimized
+
+## 5. Write Once, Run Anywhere
+Java code compiles to **bytecode**, which runs on any JVM.
+**Flow:**
+Write code → Compile → Bytecode → Run on any system
+
+## Conclusion
+JVM handles class loading, memory management, and execution, enabling Java’s platform independence and performance.
